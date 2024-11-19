@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2d3748;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        .field span {
+            font-weight: bold;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detalle del Cliente</h1>
+    <div class="container">
+        <div class="field">
+            <span>Nombre:</span> {{ cliente.nombre }}
+        </div>
+        <div class="field">
+            <span>Apellido:</span> {{ cliente.apellido }}
+        </div>
+        <div class="field">
+            <span>Género:</span> {{ cliente.genero }}
+        </div>
+        <div class="field">
+            <span>Activo:</span> {{ cliente.activo|yesno:"Sí,No" }}
+        </div>
+        <div class="field">
+            <span>Nivel de Satisfacción:</span> {{ cliente.nivel_de_satisfaccion }}
+        </div>
+        <div class="actions">
+            <a href="/clientes/">Volver a la lista</a>
+        </div>
+    </div>
+</body>
+</html>
